@@ -1,0 +1,186 @@
+@import url("https://fonts.googleapis.com/css2?family=Libre+Baskerville:ital,wght@0,400;0,700;1,400&family=Raleway:wght@700&display=swap");
+/* font-family: 'Libre Baskerville', serif;
+font-family: 'Raleway', sans-serif; */
+
+* {
+  margin: 0;
+  padding: 0;
+}
+body {
+  font-family: "Libre Baskerville", serif;
+  font-weight: 400;
+  font-size: 1.6rem;
+  color: #3c3e64;
+
+  background-image: linear-gradient(
+      185deg,
+      rgba(248, 7, 7, 0.649) 0%,
+      rgb(240, 240, 242) 100%
+    ),
+    url(./images/background.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  min-height: 100vh;
+  /* a Parallax Scrolling Effect */
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+.app-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 2rem;
+}
+.app-header {
+  text-align: center;
+  width: 30vw;
+  font-family: "Raleway", sans-serif;
+  font-size: 2.4rem;
+}
+.search {
+  display: flex;
+  flex-direction: column;
+  margin-top: 1rem;
+}
+.search-input {
+  width: 40vw;
+  height: 1.5rem;
+  border-radius: 10px;
+  border: none;
+  background-color: rgba(255, 255, 255, 0.628);
+  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+  padding: 0.5rem 1rem;
+  color: #5859627f;
+  font-size: 1rem;
+  font-style: italic;
+}
+.search-input:focus {
+  outline: none;
+}
+.cities-list {
+  padding: 0.5rem;
+}
+.cities-list li {
+  list-style: none;
+}
+/* Today's weather */
+.main {
+  width: 90vw;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 80vh;
+}
+.todays-weather {
+  display: flex;
+  justify-content: space-around;
+  padding: 2rem;
+  margin-top: 2rem;
+}
+.weather-info {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color: #bdb5d5a2;
+  width: 20vw;
+  padding: 2rem;
+  border-radius: 10px;
+  line-height: 3rem;
+}
+.city-name-header {
+  font-size: 1.8rem;
+}
+.current-conditions-image {
+  width: 10rem;
+}
+.extra-weather-info {
+  align-items: flex-start;
+}
+.weather-unit {
+  font-size: 1.4rem;
+}
+
+/* five days forecast */
+.five-days-forecast {
+  padding: 1rem;
+  font-size: 1.4rem;
+  line-height: 3rem;
+}
+.forecast-header {
+  margin-top: 1rem;
+  font-family: "Raleway", sans-serif;
+}
+.forecast-container {
+  display: flex;
+  justify-content: space-between;
+  font-size: 1.4rem;
+}
+.forecasts-day {
+  background-color: #bdb5d5a2;
+  width: 14vw;
+  border-radius: 10px;
+  padding: 1rem;
+}
+.forecasts-day li {
+  list-style: none;
+}
+.arrow-down-icon,
+.arrow-up-icon {
+  font-size: 1.2rem;
+  font-weight: 400;
+}
+
+/* When the browser is 768px and less */
+@media (max-width: 768px) {
+  .search {
+    margin-top: 2rem;
+  }
+  .todays-weather {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    align-items: center;
+    padding: 2rem;
+    margin-top: 2rem;
+  }
+  .weather-info {
+    width: 50vw;
+    height: 20vh;
+    margin-top: 1rem;
+  }
+  .forecast-header {
+    text-align: center;
+  }
+  .forecast-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 2rem;
+  }
+  .forecasts-day {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 50vw;
+    height: 20vh;
+    margin-top: 1rem;
+  }
+}
+
+/* When the browser is 480px and less */
+@media (max-width: 480px) {
+  .weather-info {
+    width: 60vw;
+    height: 20vh;
+    margin-top: 1rem;
+  }
+  .extra-weather-info {
+    font-size: 1.2rem;
+  }
+  .forecast-container {
+    font-size: 1.2rem;
+  }
+}
